@@ -1,0 +1,46 @@
+{
+    "name": "tobento/service-uri",
+    "type": "library",
+    "description": "The uri service provides useful classes to deal with URLs in your applications.",
+    "keywords": [
+        "tobento",
+        "package",
+        "uri",
+        "path"
+	],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,    
+    "require": {
+        "php": ">=8.0",
+        "psr/http-message": "^1.0",
+        "psr/http-factory": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.0",
+        "nyholm/psr7": "^1.4"
+    },   
+    "autoload": {
+        "psr-4": {
+            "Tobento\\Service\\Uri\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tobento\\Service\\Uri\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always",
+        "psalm": "vendor/bin/psalm"
+    }
+}
