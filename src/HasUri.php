@@ -215,7 +215,7 @@ trait HasUri
      * @return static A new instance with the specified scheme.
      * @throws \InvalidArgumentException for invalid or unsupported schemes.
      */
-    public function withScheme($scheme)
+    public function withScheme($scheme): static
     {
         return $this->uri->withScheme($scheme);
     }
@@ -234,7 +234,7 @@ trait HasUri
      * @param null|string $password The password associated with $user.
      * @return static A new instance with the specified user information.
      */
-    public function withUserInfo($user, $password = null)
+    public function withUserInfo($user, $password = null): static
     {
         return $this->uri->withUserInfo($user, $password);
     }
@@ -252,7 +252,7 @@ trait HasUri
      * @return static A new instance with the specified host.
      * @throws \InvalidArgumentException for invalid hostnames.
      */
-    public function withHost($host)
+    public function withHost($host): static
     {
         return $this->uri->withHost($host);
     }
@@ -274,7 +274,7 @@ trait HasUri
      * @return static A new instance with the specified port.
      * @throws \InvalidArgumentException for invalid ports.
      */
-    public function withPort($port)
+    public function withPort($port): static
     {
         return $this->uri->withPort($port);
     }
@@ -301,7 +301,7 @@ trait HasUri
      * @return static A new instance with the specified path.
      * @throws \InvalidArgumentException for invalid paths.
      */
-    public function withPath($path)
+    public function withPath($path): static
     {
         return $this->uri->withPath($path);
     }
@@ -321,7 +321,7 @@ trait HasUri
      * @return static A new instance with the specified query string.
      * @throws \InvalidArgumentException for invalid query strings.
      */
-    public function withQuery($query)
+    public function withQuery($query): static
     {
         return $this->uri->withQuery($query);
     }
@@ -340,7 +340,7 @@ trait HasUri
      * @param string $fragment The fragment to use with the new instance.
      * @return static A new instance with the specified fragment.
      */
-    public function withFragment($fragment)
+    public function withFragment($fragment): static
     {
         return $this->uri->withFragment($fragment);
     }
