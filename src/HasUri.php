@@ -215,7 +215,7 @@ trait HasUri
      * @return static A new instance with the specified scheme.
      * @throws \InvalidArgumentException for invalid or unsupported schemes.
      */
-    public function withScheme($scheme): static
+    public function withScheme($scheme): UriInterface
     {
         return $this->uri->withScheme($scheme);
     }
@@ -234,7 +234,7 @@ trait HasUri
      * @param null|string $password The password associated with $user.
      * @return static A new instance with the specified user information.
      */
-    public function withUserInfo($user, $password = null): static
+    public function withUserInfo($user, $password = null): UriInterface
     {
         return $this->uri->withUserInfo($user, $password);
     }
@@ -252,7 +252,7 @@ trait HasUri
      * @return static A new instance with the specified host.
      * @throws \InvalidArgumentException for invalid hostnames.
      */
-    public function withHost($host): static
+    public function withHost($host): UriInterface
     {
         return $this->uri->withHost($host);
     }
@@ -274,7 +274,7 @@ trait HasUri
      * @return static A new instance with the specified port.
      * @throws \InvalidArgumentException for invalid ports.
      */
-    public function withPort($port): static
+    public function withPort($port): UriInterface
     {
         return $this->uri->withPort($port);
     }
@@ -301,7 +301,7 @@ trait HasUri
      * @return static A new instance with the specified path.
      * @throws \InvalidArgumentException for invalid paths.
      */
-    public function withPath($path): static
+    public function withPath($path): UriInterface
     {
         return $this->uri->withPath($path);
     }
@@ -321,7 +321,7 @@ trait HasUri
      * @return static A new instance with the specified query string.
      * @throws \InvalidArgumentException for invalid query strings.
      */
-    public function withQuery($query): static
+    public function withQuery($query): UriInterface
     {
         return $this->uri->withQuery($query);
     }
@@ -340,7 +340,7 @@ trait HasUri
      * @param string $fragment The fragment to use with the new instance.
      * @return static A new instance with the specified fragment.
      */
-    public function withFragment($fragment): static
+    public function withFragment($fragment): UriInterface
     {
         return $this->uri->withFragment($fragment);
     }
