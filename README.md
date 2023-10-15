@@ -15,6 +15,7 @@ The uri service provides useful classes to deal with URLs in your applications.
     - [Base Uri](#base-uri)
     - [Current Uri](#current-uri)
     - [Previous Uri](#previous-uri)
+    - [Asset Uri](#asset-uri)
     - [Base Path Resolver](#base-path-resolver)
 - [Credits](#credits)
 ___
@@ -329,6 +330,27 @@ var_dump($previousUri instanceof UriInterface);
 // bool(true)
 
 var_dump($previousUri instanceof PreviousUriInterface);
+// bool(true)
+```
+
+## Asset Uri
+
+The AssetUri class might be useful for your application.
+
+```php
+use Tobento\Service\Uri\AssetUri;
+use Tobento\Service\Uri\AssetUriInterface;
+use Psr\Http\Message\UriInterface;
+use Nyholm\Psr7\Factory\Psr17Factory;
+        
+$uri = (new Psr17Factory())->createUri('https://example.com/asset/path/');
+
+$assetUri = new AssetUri($uri);
+
+var_dump($assetUri instanceof UriInterface);
+// bool(true)
+
+var_dump($assetUri instanceof BaseUriInterface);
 // bool(true)
 ```
 
