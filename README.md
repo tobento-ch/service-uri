@@ -30,7 +30,7 @@ composer require tobento/service-uri
 
 ## Requirements
 
-- PHP 8.0 or greater
+- PHP 8.4 or greater
 
 ## Highlights
 
@@ -277,7 +277,7 @@ use Tobento\Service\Uri\BaseUriInterface;
 use Psr\Http\Message\UriInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
         
-$uri = (new Psr17Factory())->createUri('https://example.com/base/path/');
+$uri = new Psr17Factory()->createUri('https://example.com/base/path/');
 
 $baseUri = new BaseUri($uri);
 
@@ -298,7 +298,7 @@ use Tobento\Service\Uri\CurrentUriInterface;
 use Psr\Http\Message\UriInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
         
-$uri = (new Psr17Factory())->createUri('https://example.com/current/path/');
+$uri = new Psr17Factory()->createUri('https://example.com/current/path/');
 
 $currentUri = new CurrentUri($uri, isHome: true);
 
@@ -322,7 +322,7 @@ use Tobento\Service\Uri\PreviousUriInterface;
 use Psr\Http\Message\UriInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
         
-$uri = (new Psr17Factory())->createUri('https://example.com/previous/path/');
+$uri = new Psr17Factory()->createUri('https://example.com/previous/path/');
 
 $previousUri = new PreviousUri($uri);
 
@@ -343,7 +343,7 @@ use Tobento\Service\Uri\AssetUriInterface;
 use Psr\Http\Message\UriInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
         
-$uri = (new Psr17Factory())->createUri('https://example.com/asset/path/');
+$uri = new Psr17Factory()->createUri('https://example.com/asset/path/');
 
 $assetUri = new AssetUri($uri);
 
@@ -361,7 +361,7 @@ use Tobento\Service\Uri\BasePathResolver;
 use Tobento\Service\Uri\BasePathResolverInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
 
-$serverRequest = (new Psr17Factory())->createServerRequest(
+$serverRequest = new Psr17Factory()->createServerRequest(
     'GET',
     'https://example.com',
     ['SCRIPT_NAME' => '/foo/uri.php']
