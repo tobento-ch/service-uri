@@ -195,7 +195,7 @@ class UriQuery
     {        
         $query = http_build_query($parameters, '', '&');
         $query = urldecode($query);
-        return preg_replace('/\\[([0-9]+)\\]/', '[]', $query);
+        return (string)preg_replace('/\\[([0-9]+)\\]/', '[]', $query);
     }
 
     /**
